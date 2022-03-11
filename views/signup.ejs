@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SignUp</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="web/signup/fonts/linearicons/style.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="web/signup/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<img src="web/signup/images/image-1.png" alt="" class="image-1">
+				<form action="/signup" method="post">
+					<% if(message.length > 0) { %>
+						<div class="alert">
+							<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+							<strong><%= message %></strong>
+						</div>
+						<% } %>
+					<h3>New Account?</h3>
+					<div class="form-holder">
+						<span class="lnr lnr-user"></span>
+						<input type="text" class="form-control" placeholder="Username" name="usrName" id="name">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-phone-handset"></span>
+						<input type="text" class="form-control" placeholder="Phone Number" name="usrPhone">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-envelope"></span>
+						<input type="text" class="form-control" placeholder="Mail" name="usrMail">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" class="form-control" placeholder="Password" name="usrPass">
+					</div>
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+						<input type="password" class="form-control" placeholder="Confirm Password" name="usrCnfpass">
+					</div>
+					<button>
+						<span>Register</span>
+					</button>
+					<div class="text-center">
+						<a href="/" class="txt2 hov1 btnsignin">
+							Sign In
+						</a>
+					</div>
+				</form>
+				<img src="web/signup/images/image-2.png" alt="" class="image-2">
+			</div>
+			
+		</div>
+		
+		<script src="web/signup/js/jquery-3.3.1.min.js"></script>
+		<script src="web/signup/js/main.js"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

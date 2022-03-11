@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body{
+      background-color: rgb(127, 220, 243);
+    }
+    .table-header
+    {
+     
+     	background:#000;
+      color: antiquewhite;
+      font-size: 17px;  
+    }
+    img{
+      border-radius: 60%;
+    }
+  </style>
+</head>
+<body>
+    <h1>Welcome To
+        <%= data.usrName %>
+    </h1>
+    <a href="logout">Logout</a>
+<div class="container">
+  <h2><center>User Details</center></h2>
+  <p><a href="/signup" class="btn btn-danger"> Add Employee</a></p>            
+  <table class="table">
+    <thead class="table-header">
+      <tr>
+        <th> Name</th>
+        <th> Email</th>
+        <th> Phone Number</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td><%=data.usrName %></td>
+        <td><%=data.usrMail %></td>
+        <td><%=data.usrPhone %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
