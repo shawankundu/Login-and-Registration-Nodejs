@@ -33,7 +33,7 @@ exports.usrAuth = (req, res, next)=>{
 
 exports.usrDashboard = (req, res) => {
     if (req.usr) {
-        usrModel.find({}, function(err, usrDetails) {
+        usrModel.find({}, (err, usrDetails)=> {
             if (!err) {
                 res.render("usrDashboard", {
                     title: "User | Dashboard",

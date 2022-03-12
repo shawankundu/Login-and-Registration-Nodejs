@@ -30,8 +30,10 @@ exports.signin = (req ,res, next) => {
             if(bcrypt.compareSync(req.body.usrPass, hashPassword)){
                 const token = jwt.sign({
                     id:data._id,
-                    usrName:data.usrName
-                },"shawan-30121995@#1!8293",{expiresIn:'5s'});
+                    usrName:data.usrName,
+                    usrMail:data.usrMail,
+                    usrPhone:data.usrPhone
+                },"shawan-30121995@#1!8293",{expiresIn:'10m'});
                 res.cookie('userToken', token);
                 if(req.body.rememberme){
                     res.cookie('usrMail', req.body.usrMail)
